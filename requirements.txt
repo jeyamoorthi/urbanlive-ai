@@ -1,0 +1,7 @@
+pathway
+streamlit
+python-dotenv
+codecarbon
+sentence-transformers
+requests
+numpy
