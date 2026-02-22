@@ -57,55 +57,55 @@ st.markdown("""
 .block-container { padding-top: 1rem !important; max-width: 100%; }
 #MainMenu, footer, header { visibility: hidden }
 div[data-testid="stMetric"] { display: none }
-.stSelectbox label { color: #64748b !important; font-size: 11px !important; letter-spacing: 1px; text-transform: uppercase; font-weight: 600 !important; }
+.stSelectbox label { color: #94a3b8 !important; font-size: 13px !important; letter-spacing: 1px; text-transform: uppercase; font-weight: 600 !important; }
 .stSelectbox > div > div { background: #111827 !important; border-color: #1e293b !important; color: #e2e8f0 !important; }
-.sys-header { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 16px 24px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
-.sys-title { font-size: 15px; font-weight: 700; color: #f1f5f9; letter-spacing: 1.5px }
-.sys-sub { font-size: 11px; color: #475569; margin-top: 2px }
-.live-ind { display: flex; align-items: center; gap: 6px }
-.live-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pdot 2s ease-in-out infinite; }
+.sys-header { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 20px 28px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.sys-title { font-size: 20px; font-weight: 700; color: #f1f5f9; letter-spacing: 1.5px }
+.sys-sub { font-size: 13px; color: #94a3b8; margin-top: 4px }
+.live-ind { display: flex; align-items: center; gap: 8px }
+.live-dot { width: 10px; height: 10px; background: #22c55e; border-radius: 50%; animation: pdot 2s ease-in-out infinite; }
 @keyframes pdot { 0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4) } 50% { box-shadow: 0 0 0 6px rgba(34,197,94,0) } }
-.live-lbl { color: #22c55e; font-size: 10px; font-weight: 600; letter-spacing: 1px }
-.sec-h { font-size: 12px; font-weight: 700; color: #94a3b8; letter-spacing: 0.5px; margin: 20px 0 12px 0; padding-bottom: 6px; border-bottom: 1px solid #1e293b; }
-.card { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 18px 20px; }
-.card-label { font-size: 10px; font-weight: 600; color: #64748b; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px; }
-.card-value { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; line-height: 1.1; }
-.card-sub { font-size: 10px; color: #475569; margin-top: 4px }
-.aqi-panel { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 32px; text-align: center; }
-.aqi-number { font-family: 'JetBrains Mono', monospace; font-size: 64px; font-weight: 800; line-height: 1; margin: 4px 0; }
-.aqi-band { font-size: 13px; font-weight: 700; letter-spacing: 0.5px }
-.aqi-source { font-size: 10px; color: #475569; margin-top: 6px }
-.grap-panel { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 24px; text-align: center; display: flex; flex-direction: column; justify-content: center; min-height: 160px; }
-.grap-stage { font-size: 18px; font-weight: 800; margin: 6px 0 }
-.grap-desc { font-size: 12px; color: #64748b }
-.esc-triggered { background: rgba(239,68,68,0.06); border: 2px solid #ef4444; border-radius: 8px; padding: 16px 24px; text-align: center; animation: egl 2.5s ease-in-out infinite; }
+.live-lbl { color: #22c55e; font-size: 12px; font-weight: 600; letter-spacing: 1px }
+.sec-h { font-size: 16px; font-weight: 700; color: #e2e8f0; letter-spacing: 0.5px; margin: 32px 0 16px 0; padding-bottom: 8px; padding-left: 12px; border-bottom: 2px solid #1e293b; border-left: 4px solid #38bdf8; }
+.card { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 22px 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.card-label { font-size: 12px; font-weight: 600; color: #94a3b8; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 8px; }
+.card-value { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; line-height: 1.1; letter-spacing: 0.5px; }
+.card-sub { font-size: 11px; color: #64748b; margin-top: 6px }
+.aqi-panel { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 36px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.aqi-number { font-family: 'JetBrains Mono', monospace; font-size: 64px; font-weight: 800; line-height: 1; margin: 6px 0; letter-spacing: 0.5px; }
+.aqi-band { font-size: 15px; font-weight: 700; letter-spacing: 0.5px }
+.aqi-source { font-size: 12px; color: #64748b; margin-top: 8px }
+.grap-panel { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 28px; text-align: center; display: flex; flex-direction: column; justify-content: center; min-height: 160px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.grap-stage { font-size: 22px; font-weight: 800; margin: 8px 0; letter-spacing: 0.5px; }
+.grap-desc { font-size: 14px; color: #94a3b8 }
+.esc-triggered { background: rgba(127,29,29,0.35); border: 2px solid #ef4444; border-radius: 10px; padding: 20px 28px; text-align: center; animation: egl 2.5s ease-in-out infinite; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
 @keyframes egl { 0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.2) } 50% { box-shadow: 0 0 12px 2px rgba(239,68,68,0.1) } }
-.esc-watch { background: rgba(249,115,22,0.04); border: 2px solid #f97316; border-radius: 8px; padding: 16px 24px; text-align: center; }
-.esc-normal { background: rgba(34,197,94,0.04); border: 2px solid #22c55e; border-radius: 8px; padding: 16px 24px; text-align: center; }
-.esc-status { font-size: 16px; font-weight: 800; letter-spacing: 1.5px }
-.esc-detail { font-size: 12px; color: #94a3b8; margin-top: 4px }
-.prog-outer { background: #1e293b; border-radius: 4px; height: 4px; margin-top: 8px; overflow: hidden }
+.esc-watch { background: rgba(124,45,18,0.3); border: 2px solid #f97316; border-radius: 10px; padding: 20px 28px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.esc-normal { background: rgba(6,78,59,0.3); border: 2px solid #22c55e; border-radius: 10px; padding: 20px 28px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.esc-status { font-size: 20px; font-weight: 800; letter-spacing: 1.5px }
+.esc-detail { font-size: 14px; color: #cbd5e1; margin-top: 6px }
+.prog-outer { background: #1e293b; border-radius: 4px; height: 6px; margin-top: 10px; overflow: hidden }
 .prog-inner { height: 100%; border-radius: 4px; transition: width 0.5s }
-.rule-box { background: #111827; border-left: 3px solid #3b82f6; border-radius: 0 6px 6px 0; padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #94a3b8; line-height: 1.6; }
-.adv-panel { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 20px 24px; }
-.adv-st { font-size: 11px; font-weight: 700; color: #3b82f6; letter-spacing: 0.5px; margin: 14px 0 6px 0; padding-top: 10px; border-top: 1px solid #1e293b; }
+.rule-box { background: #111827; border-left: 3px solid #3b82f6; border-radius: 0 8px 8px 0; padding: 14px 18px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #cbd5e1; line-height: 1.7; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.adv-panel { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 24px 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.adv-st { font-size: 13px; font-weight: 700; color: #3b82f6; letter-spacing: 0.5px; margin: 16px 0 8px 0; padding-top: 12px; border-top: 1px solid #1e293b; }
 .adv-st:first-child { border-top: none; margin-top: 0; padding-top: 0; }
-.adv-text { font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.7; color: #cbd5e1; white-space: pre-wrap; }
-.rag-card { background: linear-gradient(145deg, #0f1a2e, #111827); border: 1px solid #1e3a5f; border-radius: 8px; padding: 16px 18px; }
-.log-entry { background: #111827; border-left: 3px solid #ef4444; padding: 12px 16px; margin-bottom: 8px; border-radius: 0 6px 6px 0; }
-.carbon-card { background: linear-gradient(145deg, #071a0f, #0d2818); border: 1px solid #14532d; border-radius: 8px; padding: 16px 18px; }
-.carbon-lbl { font-size: 10px; font-weight: 600; color: #4ade80; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px; }
-.carbon-val { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; color: #86efac; }
-.meth-box { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 18px 22px; }
-.meth-text { font-size: 12px; line-height: 1.8; color: #94a3b8 }
-.meth-hl { color: #e2e8f0; font-weight: 600 }
-.val-card { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 16px 20px; text-align: center; }
-.val-lbl { font-size: 10px; font-weight: 600; color: #64748b; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px }
-.val-v { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700 }
-.stale-banner { background: rgba(234,179,8,0.08); border: 2px solid #eab308; border-radius: 8px; padding: 12px 20px; text-align: center; margin-bottom: 16px; }
-.stale-text { color: #eab308; font-size: 13px; font-weight: 700; letter-spacing: 0.5px }
-.stale-sub { color: #94a3b8; font-size: 10px; margin-top: 4px }
-.feed-err { background: rgba(239,68,68,0.05); border: 1px solid #7f1d1d; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
+.adv-text { font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.8; color: #e2e8f0; white-space: pre-wrap; }
+.rag-card { background: linear-gradient(145deg, #0f1a2e, #111827); border: 1px solid #1e3a5f; border-radius: 10px; padding: 20px 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.log-entry { background: #111827; border-left: 4px solid #ef4444; padding: 16px 20px; margin-bottom: 10px; border-radius: 0 8px 8px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.carbon-card { background: linear-gradient(145deg, #071a0f, #0d2818); border: 1px solid #14532d; border-radius: 10px; padding: 20px 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.carbon-lbl { font-size: 12px; font-weight: 600; color: #4ade80; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 8px; }
+.carbon-val { font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 700; color: #86efac; letter-spacing: 0.5px; }
+.meth-box { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 22px 26px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.meth-text { font-size: 14px; line-height: 1.8; color: #cbd5e1 }
+.meth-hl { color: #f1f5f9; font-weight: 600 }
+.val-card { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 20px 24px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.val-lbl { font-size: 12px; font-weight: 600; color: #94a3b8; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 8px }
+.val-v { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; letter-spacing: 0.5px; }
+.stale-banner { background: rgba(234,179,8,0.08); border: 2px solid #eab308; border-radius: 10px; padding: 16px 24px; text-align: center; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.stale-text { color: #eab308; font-size: 15px; font-weight: 700; letter-spacing: 0.5px }
+.stale-sub { color: #cbd5e1; font-size: 12px; margin-top: 6px }
+.feed-err { background: rgba(239,68,68,0.05); border: 1px solid #7f1d1d; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -180,9 +180,9 @@ if view_mode == "National Overview":
             for i, (stn, v) in enumerate(top_aqi):
                 ac = aqi_color(v.get("aqi", 0))
                 st.markdown(f"""
-                <div style="display:flex;justify-content:space-between;padding:4px 8px;border-bottom:1px solid #1e293b">
-                    <span style="color:#94a3b8;font-size:10px">#{i+1} {stn[:35]}</span>
-                    <span style="color:{ac};font-weight:700;font-size:11px">{v.get('aqi', 0)}</span>
+                <div style="display:flex;justify-content:space-between;padding:6px 10px;border-bottom:1px solid #1e293b">
+                    <span style="color:#cbd5e1;font-size:12px">#{i+1} {stn[:35]}</span>
+                    <span style="color:{ac};font-weight:700;font-size:13px">{v.get('aqi', 0)}</span>
                 </div>""", unsafe_allow_html=True)
 
         with t2:
@@ -194,19 +194,19 @@ if view_mode == "National Overview":
                 eri = v.get("eri_score", 0)
                 ec = "#dc2626" if eri >= 76 else "#ef4444" if eri >= 51 else "#eab308" if eri >= 26 else "#22c55e"
                 st.markdown(f"""
-                <div style="display:flex;justify-content:space-between;padding:4px 8px;border-bottom:1px solid #1e293b">
-                    <span style="color:#94a3b8;font-size:10px">#{i+1} {stn[:35]}</span>
-                    <span style="color:{ec};font-weight:700;font-size:11px">{eri}</span>
+                <div style="display:flex;justify-content:space-between;padding:6px 10px;border-bottom:1px solid #1e293b">
+                    <span style="color:#cbd5e1;font-size:12px">#{i+1} {stn[:35]}</span>
+                    <span style="color:{ec};font-weight:700;font-size:13px">{eri}</span>
                 </div>""", unsafe_allow_html=True)
 
         st.markdown(f"""
         <div style="text-align:center;padding:8px 0">
-            <span style="color:#334155;font-size:9px">{len(_active)} active stations | {len(_all_stations)} available | Auto-updated | WAQI Direct</span>
+            <span style="color:#64748b;font-size:11px">{len(_active)} active stations | {len(_all_stations)} available | Auto-updated | WAQI Direct</span>
         </div>""", unsafe_allow_html=True)
     else:
         st.markdown("""
         <div class="card" style="text-align:center;padding:30px">
-            <div style="color:#475569;font-size:11px">No station data yet. Select stations above and wait for data to stream...</div>
+            <div style="color:#94a3b8;font-size:13px">No station data yet. Select stations above and wait for data to stream...</div>
         </div>""", unsafe_allow_html=True)
 
     if not selected:
@@ -216,8 +216,8 @@ if not selected:
     st.markdown("""
     <div style="background:rgba(234,179,8,0.08);border:2px solid #eab308;border-radius:8px;
                 padding:40px;text-align:center;margin-top:20px">
-        <div style="color:#eab308;font-size:15px;font-weight:700">Operator must select monitoring node</div>
-        <div style="color:#94a3b8;font-size:11px;margin-top:6px">Select a station from the dropdown above to begin.</div>
+        <div style="color:#eab308;font-size:17px;font-weight:700">Operator must select monitoring node</div>
+        <div style="color:#cbd5e1;font-size:13px;margin-top:8px">Select a station from the dropdown above to begin.</div>
     </div>""", unsafe_allow_html=True)
     st.stop()
 info = _all_stations.get(selected, STATIONS.get(selected, {}))
@@ -225,11 +225,11 @@ data = latest_state.get(selected)
 
 # Station metadata
 st.markdown(f"""
-<div style="display:flex;gap:20px;margin-top:6px;flex-wrap:wrap">
-    <span style="color:#475569;font-size:10px">Latitude: <span style="color:#94a3b8">{info['lat']}</span></span>
-    <span style="color:#475569;font-size:10px">Longitude: <span style="color:#94a3b8">{info['lon']}</span></span>
-    <span style="color:#475569;font-size:10px">Feed: <span style="color:#94a3b8">{info['feed_id']}</span></span>
-    <span style="color:#475569;font-size:10px">Source: <span style="color:#94a3b8">WAQI Real-Time Feed</span></span>
+<div style="display:flex;gap:24px;margin-top:8px;flex-wrap:wrap">
+    <span style="color:#64748b;font-size:12px">Latitude: <span style="color:#cbd5e1">{info['lat']}</span></span>
+    <span style="color:#64748b;font-size:12px">Longitude: <span style="color:#cbd5e1">{info['lon']}</span></span>
+    <span style="color:#64748b;font-size:12px">Feed: <span style="color:#cbd5e1">{info['feed_id']}</span></span>
+    <span style="color:#64748b;font-size:12px">Source: <span style="color:#cbd5e1">WAQI Real-Time Feed</span></span>
 </div>
 """, unsafe_allow_html=True)
 
@@ -237,9 +237,9 @@ if not data:
     st.markdown("""
     <div style="background:#111827; border:1px solid #1e293b; border-radius:8px;
                 padding:80px; text-align:center">
-        <div style="color:#64748b; font-size:13px; font-weight:600;
+        <div style="color:#94a3b8; font-size:15px; font-weight:600;
                     letter-spacing:1px">AWAITING TELEMETRY</div>
-        <div style="color:#475569; font-size:11px; margin-top:6px">
+        <div style="color:#64748b; font-size:13px; margin-top:8px">
             Pathway engine initializing. Data appears on first window close.</div>
     </div>
     """, unsafe_allow_html=True)
@@ -316,43 +316,45 @@ st.markdown('<div class="sec-h">Section 2 — Data Source Transparency</div>', u
 freshness_txt = f"{int(stale_sec)}s ago" if stale_sec is not None else "—"
 freshness_clr = "#ef4444" if (stale_sec and stale_sec > STALE_DATA_THRESHOLD_SECONDS) else "#22c55e" if stale_sec is not None else "#64748b"
 
-t1, t2, t3, t4, t5, t6 = st.columns(6)
+t1, t2, t3 = st.columns(3)
 with t1:
     st.markdown(f"""
-    <div class="card" style="text-align:center;padding:14px">
+    <div class="card" style="text-align:center;padding:16px">
         <div class="card-label">WAQI Feed ID</div>
-        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700">{feed_id}</div>
+        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700">{feed_id}</div>
     </div>""", unsafe_allow_html=True)
 with t2:
     st.markdown(f"""
-    <div class="card" style="text-align:center;padding:14px">
+    <div class="card" style="text-align:center;padding:16px">
         <div class="card-label">WAQI AQI</div>
-        <div style="color:{ac};font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700">{waqi_aqi if waqi_aqi else '—'}</div>
+        <div style="color:{ac};font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;letter-spacing:0.5px">{waqi_aqi if waqi_aqi else '—'}</div>
     </div>""", unsafe_allow_html=True)
 with t3:
     st.markdown(f"""
-    <div class="card" style="text-align:center;padding:14px">
+    <div class="card" style="text-align:center;padding:16px">
         <div class="card-label">WAQI Timestamp</div>
-        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600">{waqi_ts if waqi_ts else '—'}</div>
+        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600">{waqi_ts if waqi_ts else '—'}</div>
     </div>""", unsafe_allow_html=True)
+
+t4, t5, t6 = st.columns(3)
 with t4:
     st.markdown(f"""
-    <div class="card" style="text-align:center;padding:14px">
+    <div class="card" style="text-align:center;padding:16px">
         <div class="card-label">Station Name (API)</div>
-        <div style="color:#e2e8f0;font-size:11px;font-weight:600">{station_name_api if station_name_api else '—'}</div>
+        <div style="color:#e2e8f0;font-size:13px;font-weight:600">{station_name_api if station_name_api else '—'}</div>
     </div>""", unsafe_allow_html=True)
 with t5:
     pm25_v = data.get("raw_pm25")
     st.markdown(f"""
-    <div class="card" style="text-align:center;padding:14px">
+    <div class="card" style="text-align:center;padding:16px">
         <div class="card-label">Raw PM2.5</div>
-        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700">{pm25_v if pm25_v is not None else '—'}</div>
+        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;letter-spacing:0.5px">{pm25_v if pm25_v is not None else '—'}</div>
     </div>""", unsafe_allow_html=True)
 with t6:
     st.markdown(f"""
-    <div class="card" style="text-align:center;padding:14px">
+    <div class="card" style="text-align:center;padding:16px">
         <div class="card-label">API Freshness</div>
-        <div style="color:{freshness_clr};font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700">{freshness_txt}</div>
+        <div style="color:{freshness_clr};font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;letter-spacing:0.5px">{freshness_txt}</div>
     </div>""", unsafe_allow_html=True)
 
 
@@ -379,21 +381,21 @@ with v2:
     st.markdown(f"""
     <div class="val-card">
         <div class="val-lbl">Data Type</div>
-        <div class="val-v" style="color:#e2e8f0;font-size:13px">Real-Time Short Window</div>
+        <div class="val-v" style="color:#e2e8f0;font-size:15px">Real-Time Short Window</div>
         <div class="card-sub">Not 24h composite. Early warning.</div>
     </div>""", unsafe_allow_html=True)
 with v3:
     st.markdown(f"""
     <div class="val-card">
         <div class="val-lbl">API Response</div>
-        <div class="val-v" style="color:#94a3b8;font-size:14px">{api_time} UTC</div>
+        <div class="val-v" style="color:#cbd5e1;font-size:16px">{api_time} UTC</div>
         <div class="card-sub">Last successful poll</div>
     </div>""", unsafe_allow_html=True)
 with v4:
     st.markdown(f"""
     <div class="val-card">
         <div class="val-lbl">WAQI Timestamp</div>
-        <div class="val-v" style="color:#94a3b8;font-size:12px">{waqi_ts if waqi_ts else '—'}</div>
+        <div class="val-v" style="color:#cbd5e1;font-size:14px">{waqi_ts if waqi_ts else '—'}</div>
         <div class="card-sub">From WAQI payload</div>
     </div>""", unsafe_allow_html=True)
 
@@ -412,9 +414,9 @@ pollutant_items = [
 poll_html = '<div style="display:flex;gap:16px;flex-wrap:wrap">'
 for name, val in pollutant_items:
     if val is not None:
-        poll_html += f'<span style="color:#22c55e;font-size:12px;font-weight:600">&#10004; {name} <span style="color:#94a3b8;font-weight:400">({val})</span></span>'
+        poll_html += f'<span style="color:#22c55e;font-size:13px;font-weight:600">&#10004; {name} <span style="color:#cbd5e1;font-weight:400">({val})</span></span>'
     else:
-        poll_html += f'<span style="color:#334155;font-size:12px">&#10008; {name}</span>'
+        poll_html += f'<span style="color:#475569;font-size:13px">&#10008; {name}</span>'
 poll_html += '</div>'
 st.markdown(f"""
 <div class="card" style="padding:14px 18px">
@@ -515,7 +517,7 @@ tl_map = {
 }
 tl_clr, tl_txt = tl_map.get(t_label, ("#64748b", "Awaiting Satellite Data"))
 
-s1, s2, s3, s4, s5 = st.columns(5)
+s1, s2, s3 = st.columns(3)
 with s1:
     fc_clr = "#ef4444" if fire_count > 5 else "#eab308" if fire_count > 0 else "#22c55e"
     st.markdown(f"""
@@ -543,14 +545,16 @@ with s3:
     st.markdown(f"""
     <div class="card" style="text-align:center">
         <div class="card-label">Wind</div>
-        <div class="card-value" style="color:#e2e8f0;font-size:16px">{w_s} m/s</div>
+        <div class="card-value" style="color:#e2e8f0;font-size:18px">{w_s} m/s</div>
         <div class="card-sub">{wind_sub}</div>
     </div>""", unsafe_allow_html=True)
+
+s4, s5 = st.columns(2)
 with s4:
     st.markdown(f"""
     <div class="card" style="text-align:center">
         <div class="card-label">Transport Source</div>
-        <div style="color:{tl_clr};font-size:12px;font-weight:700;margin-top:8px">{tl_txt}</div>
+        <div style="color:{tl_clr};font-size:14px;font-weight:700;margin-top:8px">{tl_txt}</div>
     </div>""", unsafe_allow_html=True)
 with s5:
     cf_clr = "#22c55e" if conf >= 70 else "#eab308" if conf >= 50 else "#ef4444"
@@ -569,33 +573,33 @@ with n1:
     st.markdown(f"""
     <div class="card" style="text-align:center;padding:12px">
         <div class="card-label">FIRMS Status</div>
-        <div style="color:{status_clr};font-size:12px;font-weight:700">{status_txt}</div>
+        <div style="color:{status_clr};font-size:14px;font-weight:700">{status_txt}</div>
     </div>""", unsafe_allow_html=True)
 with n2:
     st.markdown(f"""
     <div class="card" style="text-align:center;padding:12px">
         <div class="card-label">Last NASA Sync</div>
-        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600">{firms_sync} UTC</div>
+        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600">{firms_sync} UTC</div>
     </div>""", unsafe_allow_html=True)
 with n3:
     st.markdown(f"""
     <div class="card" style="text-align:center;padding:12px">
         <div class="card-label">Dataset</div>
-        <div style="color:#e2e8f0;font-size:11px;font-weight:600">{firms_ds}</div>
+        <div style="color:#e2e8f0;font-size:13px;font-weight:600">{firms_ds}</div>
     </div>""", unsafe_allow_html=True)
 with n4:
     bbox = data.get("fire_bbox", "—")
     st.markdown(f"""
     <div class="card" style="text-align:center;padding:12px">
         <div class="card-label">Bounding Box</div>
-        <div style="color:#94a3b8;font-family:'JetBrains Mono',monospace;font-size:10px">{bbox if bbox else '—'}</div>
+        <div style="color:#cbd5e1;font-family:'JetBrains Mono',monospace;font-size:12px">{bbox if bbox else '—'}</div>
     </div>""", unsafe_allow_html=True)
 
 if firms_error:
     st.markdown(f"""
     <div class="feed-err">
-        <span style="color:#ef4444;font-size:10px;font-weight:600">SATELLITE VERIFICATION TEMPORARILY UNAVAILABLE</span>
-        <span style="color:#94a3b8;font-size:10px;margin-left:8px">{firms_error}</span>
+        <span style="color:#ef4444;font-size:12px;font-weight:600">SATELLITE VERIFICATION TEMPORARILY UNAVAILABLE</span>
+        <span style="color:#cbd5e1;font-size:11px;margin-left:8px">{firms_error}</span>
     </div>""", unsafe_allow_html=True)
 
 
@@ -665,13 +669,13 @@ if data:
     _eng_mode = 'TRIGGERED' if _consec >= _pers else ('WATCH' if _consec > 0 else 'NORMAL')
     _mode_col = '#ef4444' if _eng_mode == 'TRIGGERED' else '#eab308' if _eng_mode == 'WATCH' else '#22c55e'
     st.markdown(f"""
-    <div style="background:rgba(30,41,59,0.5);border:1px solid #334155;border-radius:6px;padding:10px 14px;margin-top:8px">
-        <div style="color:#64748b;font-size:9px;font-weight:700;letter-spacing:1px;margin-bottom:6px">DECISION TRACE</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#94a3b8;line-height:1.9">
-            Input AQI: <span style="color:#e2e8f0;font-weight:600">{data.get('aqi', 0)}</span><br>
-            Threshold: <span style="color:#e2e8f0">{_thresh}</span><br>
-            Persistence: <span style="color:#e2e8f0">{_consec}/{_pers}</span><br>
-            Hysteresis: <span style="color:#e2e8f0">2 confirmations</span><br>
+    <div style="background:rgba(30,41,59,0.5);border:1px solid #334155;border-radius:8px;padding:14px 18px;margin-top:10px">
+        <div style="color:#94a3b8;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:8px">DECISION TRACE</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#cbd5e1;line-height:2">
+            Input AQI: <span style="color:#f1f5f9;font-weight:600">{data.get('aqi', 0)}</span><br>
+            Threshold: <span style="color:#f1f5f9">{_thresh}</span><br>
+            Persistence: <span style="color:#f1f5f9">{_consec}/{_pers}</span><br>
+            Hysteresis: <span style="color:#f1f5f9">2 confirmations</span><br>
             Engine Mode: <span style="color:{_mode_col};font-weight:700">{_eng_mode}</span><br>
             Escalation: <span style="color:{'#ef4444' if _esc_status == 'TRIGGERED' else '#22c55e'};font-weight:600">{_esc_status}</span><br>
             Reason: AQI {data.get('aqi', 0)} {'≥' if data.get('aqi', 0) >= _thresh else '<'} {_thresh} for {_consec} window(s)
@@ -683,18 +687,18 @@ if data:
 # ══════════════════════════════════════════════════════════════════════
 st.markdown('<div class="sec-h">Section 8 — Policy Retrieval Intelligence</div>', unsafe_allow_html=True)
 
-r1, r2, r3, r4, r5 = st.columns(5)
+r1, r2, r3 = st.columns(3)
 with r1:
     st.markdown(f"""
     <div class="rag-card">
         <div class="card-label">Index Type</div>
-        <div style="color:#3b82f6;font-size:12px;font-weight:600">{idx_type}</div>
+        <div style="color:#3b82f6;font-size:14px;font-weight:600">{idx_type}</div>
     </div>""", unsafe_allow_html=True)
 with r2:
     st.markdown(f"""
     <div class="rag-card">
         <div class="card-label">Source Document</div>
-        <div style="color:#e2e8f0;font-size:11px;font-weight:600;word-break:break-all">{data.get('rag_policy_file','N/A')}</div>
+        <div style="color:#e2e8f0;font-size:13px;font-weight:600;word-break:break-all">{data.get('rag_policy_file','N/A')}</div>
     </div>""", unsafe_allow_html=True)
 with r3:
     s = data.get("rag_similarity_score", 0.0)
@@ -702,19 +706,21 @@ with r3:
     st.markdown(f"""
     <div class="rag-card">
         <div class="card-label">Similarity</div>
-        <div style="color:{sc};font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700">{s}</div>
+        <div style="color:{sc};font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;letter-spacing:0.5px">{s}</div>
     </div>""", unsafe_allow_html=True)
+
+r4, r5 = st.columns(2)
 with r4:
     st.markdown(f"""
     <div class="rag-card">
         <div class="card-label">Last Sync</div>
-        <div style="color:#e2e8f0;font-size:12px;font-weight:600">{data.get('rag_last_updated','N/A')}</div>
+        <div style="color:#e2e8f0;font-size:14px;font-weight:600">{data.get('rag_last_updated','N/A')}</div>
     </div>""", unsafe_allow_html=True)
 with r5:
     st.markdown(f"""
     <div class="rag-card">
         <div class="card-label">Docs Indexed</div>
-        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700">{data.get('rag_docs_indexed','—')}</div>
+        <div style="color:#e2e8f0;font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;letter-spacing:0.5px">{data.get('rag_docs_indexed','—')}</div>
     </div>""", unsafe_allow_html=True)
 
 
@@ -726,7 +732,7 @@ st.markdown('<div class="sec-h">Section 9 — Escalation History</div>', unsafe_
 if len(escalation_log) == 0:
     st.markdown("""
     <div class="card" style="text-align:center;padding:20px">
-        <div style="color:#475569;font-size:11px">No escalation events recorded.</div>
+        <div style="color:#94a3b8;font-size:13px">No escalation events recorded.</div>
     </div>""", unsafe_allow_html=True)
 else:
     for e in list(escalation_log)[:8]:
@@ -740,10 +746,10 @@ else:
         st.markdown(f"""
         <div class="log-entry">
             <div style="display:flex;justify-content:space-between;align-items:center">
-                <span style="font-weight:700;color:#f1f5f9;font-size:13px">{log_city}</span>
-                <span style="font-size:9px;color:#475569;font-family:'JetBrains Mono',monospace">{ts} UTC</span>
+                <span style="font-weight:700;color:#f1f5f9;font-size:15px">{log_city}</span>
+                <span style="font-size:11px;color:#64748b;font-family:'JetBrains Mono',monospace">{ts} UTC</span>
             </div>
-            <div style="margin-top:6px;font-size:11px;color:#94a3b8;line-height:1.7">
+            <div style="margin-top:8px;font-size:13px;color:#cbd5e1;line-height:1.8">
                 AQI: <span style="color:#e2e8f0;font-weight:600">{log_aqi}</span> ({log_band})<br>
                 Previous Stage: <span style="color:#e2e8f0">{log_from}</span><br>
                 New Stage: <span style="color:#ef4444;font-weight:600">{log_to}</span><br>
@@ -779,7 +785,7 @@ with g3:
 
 st.markdown("""
 <div style="text-align:center;padding:6px 0">
-    <span style="color:#334155;font-size:9px">Carbon model: deterministic per-event cost assumption</span>
+    <span style="color:#94a3b8;font-size:12px">Carbon model: deterministic per-event cost assumption</span>
 </div>""", unsafe_allow_html=True)
 
 # ══════════════════════════════════════════════════════════════════════
@@ -821,18 +827,18 @@ if forecast:
     if forecast.get("anomaly"):
         st.markdown("""
         <div style="background:rgba(239,68,68,0.06);border:2px solid #ef4444;border-radius:8px;padding:10px 16px;margin-top:8px;text-align:center">
-            <span style="color:#ef4444;font-size:12px;font-weight:700">⚠ ANOMALY DETECTED</span>
-            <span style="color:#94a3b8;font-size:10px;margin-left:8px">Current AQI deviates significantly from recent trend (z-score &gt; 2σ)</span>
+            <span style="color:#ef4444;font-size:13px;font-weight:700">⚠ ANOMALY DETECTED</span>
+            <span style="color:#e2e8f0;font-size:12px;margin-left:8px">Current AQI deviates significantly from recent trend (z-score &gt; 2σ)</span>
         </div>""", unsafe_allow_html=True)
 
     st.markdown(f"""
     <div style="text-align:center;padding:4px 0">
-        <span style="color:#334155;font-size:9px">Linear regression on last {forecast['data_points']} windows | Slope: {forecast['slope']} | Deterministic (no external API)</span>
+        <span style="color:#94a3b8;font-size:12px">Linear regression on last {forecast['data_points']} windows | Slope: {forecast['slope']} | Deterministic (no external API)</span>
     </div>""", unsafe_allow_html=True)
 else:
     st.markdown("""
     <div class="card" style="text-align:center;padding:20px">
-        <div style="color:#475569;font-size:11px">Collecting data points... (need ≥3 windows for prediction)</div>
+        <div style="color:#94a3b8;font-size:13px">Collecting data points... (need ≥3 windows for prediction)</div>
     </div>""", unsafe_allow_html=True)
 
 
@@ -853,16 +859,16 @@ with e1:
     <div class="card" style="text-align:center;padding:18px">
         <div class="card-label">ERI Score</div>
         <div style="color:{eri_col};font-family:'JetBrains Mono',monospace;font-size:32px;font-weight:700">{eri_score}</div>
-        <div style="color:{eri_col};font-size:11px;font-weight:700;margin-top:4px">{eri_cat}</div>
+        <div style="color:{eri_col};font-size:13px;font-weight:700;margin-top:4px">{eri_cat}</div>
         <div style="background:#1e293b;border-radius:4px;height:8px;margin-top:8px;overflow:hidden">
             <div style="background:{eri_col};width:{eri_score}%;height:100%"></div>
         </div>
     </div>""", unsafe_allow_html=True)
 with e2:
     if eri_factors:
-        factors_html = "".join([f'<div style="color:#e2e8f0;font-size:10px;font-family:\'JetBrains Mono\',monospace;line-height:1.9">+ {f}</div>' for f in eri_factors])
+        factors_html = "".join([f'<div style="color:#e2e8f0;font-size:12px;font-family:\'JetBrains Mono\',monospace;line-height:1.9">+ {f}</div>' for f in eri_factors])
     else:
-        factors_html = '<div style="color:#22c55e;font-size:10px">No escalation factors active</div>'
+        factors_html = '<div style="color:#22c55e;font-size:12px">No escalation factors active</div>'
     st.markdown(f"""
     <div class="card" style="padding:14px 18px">
         <div class="card-label">Contributing Factors</div>
@@ -871,7 +877,7 @@ with e2:
 
 st.markdown("""
 <div style="text-align:center;padding:4px 0">
-    <span style="color:#334155;font-size:9px">ERI is advisory only. Does NOT affect GRAP trigger logic. Formula: AQI>=200(+40) | Slope>0.5(+20) | Persistence>=1(+20) | Transport>50(+10) | Exposure>150(+10)</span>
+    <span style="color:#94a3b8;font-size:12px">ERI is advisory only. Does NOT affect GRAP trigger logic. Formula: AQI>=200(+40) | Slope>0.5(+20) | Persistence>=1(+20) | Transport>50(+10) | Exposure>150(+10)</span>
 </div>""", unsafe_allow_html=True)
 
 
@@ -891,8 +897,8 @@ if _n_stations >= 1:
         rows_html = ""
         for i, (stn, vals) in enumerate(ranked):
             val = (transform or (lambda v: v.get(key, 0)))(vals)
-            hl = "font-weight:700;color:#e2e8f0" if stn == selected else "color:#94a3b8"
-            rows_html += f'<div style="font-size:10px;{hl};line-height:1.8">#{i+1} {stn} — {val}</div>'
+            hl = "font-weight:700;color:#e2e8f0" if stn == selected else "color:#cbd5e1"
+            rows_html += f'<div style="font-size:13px;{hl};line-height:1.9">#{i+1} {stn} — {val}</div>'
         return f"""
         <div class="card" style="padding:10px 14px">
             <div class="card-label">{label}</div>
@@ -917,12 +923,12 @@ if _n_stations >= 1:
 
     st.markdown(f"""
     <div style="text-align:center;padding:4px 0">
-        <span style="color:#334155;font-size:9px">Cross-station intelligence | {_n_stations} active stations | Auto-updated on refresh | No new APIs</span>
+        <span style="color:#94a3b8;font-size:12px">Cross-station intelligence | {_n_stations} active stations | Auto-updated on refresh | No new APIs</span>
     </div>""", unsafe_allow_html=True)
 else:
     st.markdown("""
     <div class="card" style="text-align:center;padding:20px">
-        <div style="color:#475569;font-size:11px">Waiting for station data to populate ranking...</div>
+        <div style="color:#94a3b8;font-size:13px">Waiting for station data to populate ranking...</div>
     </div>""", unsafe_allow_html=True)
 
 
@@ -945,11 +951,11 @@ def _risk_color(val):
     return colors.get(val, "#475569")
 
 st.markdown(f"""
-<div style="display:flex;gap:16px;margin-bottom:8px;flex-wrap:wrap">
-    <span style="color:#475569;font-size:10px">Model: <span style="color:#94a3b8;font-weight:600">{llm_model}</span></span>
-    <span style="color:#475569;font-size:10px">Temp: <span style="color:#94a3b8">0.1</span></span>
-    <span style="color:#475569;font-size:10px">Cache: <span style="color:{'#22c55e' if llm_cached else '#eab308'};font-weight:600">{'HIT' if llm_cached else 'FRESH'}</span></span>
-    <span style="color:#475569;font-size:10px">Mode: <span style="color:#94a3b8;font-weight:600">Structured JSON</span></span>
+<div style="display:flex;gap:20px;margin-bottom:10px;flex-wrap:wrap">
+    <span style="color:#94a3b8;font-size:13px">Model: <span style="color:#e2e8f0;font-weight:600">{llm_model}</span></span>
+    <span style="color:#94a3b8;font-size:13px">Temp: <span style="color:#e2e8f0">0.1</span></span>
+    <span style="color:#94a3b8;font-size:13px">Cache: <span style="color:{'#22c55e' if llm_cached else '#eab308'};font-weight:600">{'HIT' if llm_cached else 'FRESH'}</span></span>
+    <span style="color:#94a3b8;font-size:13px">Mode: <span style="color:#e2e8f0;font-weight:600">Structured JSON</span></span>
 </div>""", unsafe_allow_html=True)
 
 l1, l2, l3, l4 = st.columns(4)
@@ -982,12 +988,12 @@ with l4:
 
 st.markdown(f"""
 <div class="card" style="padding:14px 18px;margin-top:6px">
-    <div style="color:#e2e8f0;font-size:11px;line-height:1.8;white-space:pre-wrap">{llm_summary}</div>
+    <div style="color:#e2e8f0;font-size:13px;line-height:1.8;white-space:pre-wrap">{llm_summary}</div>
 </div>""", unsafe_allow_html=True)
 
 st.markdown("""
 <div style="text-align:center;padding:4px 0">
-    <span style="color:#334155;font-size:9px">LLM explanation layer. Not used for escalation decisions. Structured JSON output. 10s cooldown per station.</span>
+    <span style="color:#94a3b8;font-size:12px">LLM explanation layer. Not used for escalation decisions. Structured JSON output. 10s cooldown per station.</span>
 </div>""", unsafe_allow_html=True)
 
 
@@ -1030,7 +1036,7 @@ if forecast and vuln_risk:
             <div class="card-sub">Based on 30-min projection</div>
         </div>""", unsafe_allow_html=True)
 
-    st.markdown('<div style="margin-top:10px;margin-bottom:4px;color:#64748b;font-size:10px;font-weight:600;letter-spacing:1px">VULNERABLE POPULATION RISK</div>', unsafe_allow_html=True)
+    st.markdown('<div style="margin-top:12px;margin-bottom:6px;color:#cbd5e1;font-size:13px;font-weight:700;letter-spacing:1px">VULNERABLE POPULATION RISK</div>', unsafe_allow_html=True)
 
     group_labels = {"general": "👤 General", "elderly": "🧓 Elderly (≥60)", "children": "👶 Children (<14)", "respiratory": "🫁 Respiratory"}
     vcols = st.columns(4)
@@ -1041,28 +1047,28 @@ if forecast and vuln_risk:
         with vcols[i]:
             st.markdown(f"""
             <div class="card" style="text-align:center;padding:12px;border-left:3px solid {lev_col}">
-                <div style="font-size:11px;color:#94a3b8;margin-bottom:4px">{label}</div>
-                <div style="color:{lev_col};font-size:18px;font-weight:700">{v['score']}</div>
-                <div style="color:{lev_col};font-size:10px;font-weight:600;text-transform:uppercase">{lev}</div>
-                <div style="color:#334155;font-size:9px;margin-top:2px">× {v['multiplier']}</div>
+                <div style="font-size:13px;color:#cbd5e1;margin-bottom:6px">{label}</div>
+                <div style="color:{lev_col};font-size:20px;font-weight:700;letter-spacing:0.5px">{v['score']}</div>
+                <div style="color:{lev_col};font-size:12px;font-weight:600;text-transform:uppercase">{lev}</div>
+                <div style="color:#94a3b8;font-size:12px;margin-top:4px">× {v['multiplier']}</div>
             </div>""", unsafe_allow_html=True)
 
     if preempt:
-        adv_items = "".join([f'<div style="color:#fbbf24;font-size:11px;line-height:1.8">▸ {a}</div>' for a in preempt])
+        adv_items = "".join([f'<div style="color:#fbbf24;font-size:13px;line-height:1.8">▸ {a}</div>' for a in preempt])
         st.markdown(f"""
         <div style="background:rgba(239,68,68,0.04);border:2px solid #ef4444;border-radius:8px;padding:12px 18px;margin-top:10px">
-            <div style="color:#ef4444;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:6px">⚠ PRE-EMPTIVE PUBLIC HEALTH ADVISORY</div>
+            <div style="color:#ef4444;font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:8px">⚠ PRE-EMPTIVE PUBLIC HEALTH ADVISORY</div>
             {adv_items}
         </div>""", unsafe_allow_html=True)
     else:
         st.markdown("""
         <div style="text-align:center;padding:8px 0;margin-top:6px">
-            <span style="color:#22c55e;font-size:10px;font-weight:600">✔ No pre-emptive advisory required at current trajectory</span>
+            <span style="color:#22c55e;font-size:12px;font-weight:600">✔ No pre-emptive advisory required at current trajectory</span>
         </div>""", unsafe_allow_html=True)
 
     st.markdown("""
     <div style="text-align:center;padding:4px 0">
-        <span style="color:#334155;font-size:9px">VPPE: Deterministic risk multipliers. No ML. Advisory-only — does not affect GRAP escalation logic.</span>
+        <span style="color:#94a3b8;font-size:12px">VPPE: Deterministic risk multipliers. No ML. Advisory-only — does not affect GRAP escalation logic.</span>
     </div>""", unsafe_allow_html=True)
 
     # Impact Radius
@@ -1082,12 +1088,12 @@ if forecast and vuln_risk:
         </div>""", unsafe_allow_html=True)
     st.markdown("""
     <div style="text-align:center;padding:2px 0">
-        <span style="color:#334155;font-size:8px">Static placeholder — configurable via civic data integration</span>
+        <span style="color:#94a3b8;font-size:12px">Static placeholder — configurable via civic data integration</span>
     </div>""", unsafe_allow_html=True)
 else:
     st.markdown("""
     <div class="card" style="text-align:center;padding:20px">
-        <div style="color:#475569;font-size:11px">Collecting data... VPPE activates after ≥3 sliding windows</div>
+        <div style="color:#94a3b8;font-size:13px">Collecting data... VPPE activates after ≥3 sliding windows</div>
     </div>""", unsafe_allow_html=True)
 
 
@@ -1121,7 +1127,7 @@ with i1:
     st.markdown(f"""
     <div class="rag-card">
         <div class="card-label">Index Type</div>
-        <div style="color:{idx_c};font-size:11px;font-weight:700">{idx_t}</div>
+        <div style="color:{idx_c};font-size:13px;font-weight:700">{idx_t}</div>
     </div>""", unsafe_allow_html=True)
 with i2:
     st.markdown(f"""
@@ -1133,7 +1139,7 @@ with i3:
     st.markdown(f"""
     <div class="rag-card">
         <div class="card-label">Embedding Model</div>
-        <div style="color:#e2e8f0;font-size:11px;font-weight:600">{_rag_state.get('embed_model', 'N/A')}</div>
+        <div style="color:#e2e8f0;font-size:13px;font-weight:600">{_rag_state.get('embed_model', 'N/A')}</div>
     </div>""", unsafe_allow_html=True)
 with i4:
     lr = _rag_state.get("last_reindex", "—")
@@ -1153,20 +1159,20 @@ if pf:
     table_html = '<div class="card" style="padding:14px 18px"><div class="card-label">Indexed Policy Documents</div>'
     table_html += '<table style="width:100%;border-collapse:collapse;margin-top:8px">'
     table_html += '<tr style="border-bottom:1px solid #1e293b">'
-    table_html += '<th style="text-align:left;color:#64748b;font-size:10px;padding:6px 8px;font-weight:600">FILENAME</th>'
-    table_html += '<th style="text-align:right;color:#64748b;font-size:10px;padding:6px 8px;font-weight:600">SIZE</th>'
-    table_html += '<th style="text-align:right;color:#64748b;font-size:10px;padding:6px 8px;font-weight:600">MODIFIED</th>'
+    table_html += '<th style="text-align:left;color:#94a3b8;font-size:12px;padding:8px 10px;font-weight:700">FILENAME</th>'
+    table_html += '<th style="text-align:right;color:#94a3b8;font-size:12px;padding:8px 10px;font-weight:700">SIZE</th>'
+    table_html += '<th style="text-align:right;color:#94a3b8;font-size:12px;padding:8px 10px;font-weight:700">MODIFIED</th>'
     table_html += '</tr>'
     for f in pf:
         table_html += f'<tr style="border-bottom:1px solid #0f172a">'
-        table_html += f'<td style="color:#e2e8f0;font-size:11px;padding:6px 8px;font-family:JetBrains Mono,monospace">{f["name"]}</td>'
-        table_html += f'<td style="color:#94a3b8;font-size:11px;padding:6px 8px;text-align:right">{f["size_kb"]} KB</td>'
-        table_html += f'<td style="color:#94a3b8;font-size:11px;padding:6px 8px;text-align:right">{f["modified"]}</td>'
+        table_html += f'<td style="color:#e2e8f0;font-size:13px;padding:8px 10px;font-family:JetBrains Mono,monospace">{f["name"]}</td>'
+        table_html += f'<td style="color:#cbd5e1;font-size:13px;padding:8px 10px;text-align:right">{f["size_kb"]} KB</td>'
+        table_html += f'<td style="color:#cbd5e1;font-size:13px;padding:8px 10px;text-align:right">{f["modified"]}</td>'
         table_html += '</tr>'
     table_html += '</table></div>'
     st.markdown(table_html, unsafe_allow_html=True)
 else:
-    st.markdown('<div class="card" style="text-align:center;padding:20px"><div style="color:#475569;font-size:11px">No policy documents found in policies/ folder.</div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="card" style="text-align:center;padding:20px"><div style="color:#94a3b8;font-size:13px">No policy documents found in policies/ folder.</div></div>', unsafe_allow_html=True)
 
 # File upload
 st.markdown('<div style="margin-top:12px"></div>', unsafe_allow_html=True)
@@ -1178,22 +1184,22 @@ if uploaded:
     _scan_policy_files()
     st.markdown(f"""
     <div style="background:rgba(34,197,94,0.06);border:1px solid #166534;border-radius:6px;padding:10px 14px;margin-top:8px">
-        <span style="color:#22c55e;font-size:11px;font-weight:700">Document ingested and indexed in real-time.</span>
-        <span style="color:#94a3b8;font-size:10px;margin-left:8px">{uploaded.name} saved to policies/</span>
+        <span style="color:#22c55e;font-size:13px;font-weight:700">Document ingested and indexed in real-time.</span>
+        <span style="color:#cbd5e1;font-size:12px;margin-left:8px">{uploaded.name} saved to policies/</span>
     </div>""", unsafe_allow_html=True)
 
 if _rag_state.get("error"):
     st.markdown(f"""
     <div class="feed-err" style="margin-top:8px">
-        <span style="color:#ef4444;font-size:10px;font-weight:600">RAG ENGINE NOTE</span>
-        <span style="color:#94a3b8;font-size:10px;margin-left:8px">{_rag_state['error']}</span>
+        <span style="color:#ef4444;font-size:13px;font-weight:700">RAG ENGINE NOTE</span>
+        <span style="color:#e2e8f0;font-size:12px;margin-left:8px">{_rag_state['error']}</span>
     </div>""", unsafe_allow_html=True)
 
 
 # Footer
 st.markdown("""
 <div style="text-align:center;padding:8px 0 16px 0">
-    <span style="color:#1e293b;font-size:8px;letter-spacing:1.5px">
+    <span style="color:#94a3b8;font-size:12px;letter-spacing:1.5px">
         AREE v2.1 | PATHWAY xLLM | WAQI-DIRECT | SATELLITE-VERIFIED | LIVE POLICY INDEX
     </span>
 </div>""", unsafe_allow_html=True)

@@ -1,6 +1,6 @@
 # Policy-grounded advisory engine
 # Pathway DocumentStore with live streaming re-indexing
-# policies/ -> parse -> chunk -> embed -> BruteForceKnn retrieval
+# policies/ (.txt only) -> chunk -> embed -> BruteForceKnn retrieval
 
 import os
 import threading
@@ -11,7 +11,7 @@ import pathway as pw
 from pathway.xpacks.llm.document_store import DocumentStore
 from pathway.xpacks.llm.embedders import SentenceTransformerEmbedder
 from pathway.xpacks.llm.splitters import TokenCountSplitter
-from pathway.xpacks.llm.parsers import UnstructuredParser
+
 from pathway.stdlib.indexing import BruteForceKnnFactory
 from sentence_transformers import SentenceTransformer
 
@@ -36,7 +36,7 @@ def _scan_policy_files():
     files = []
     for f in sorted(os.listdir(POLICY_DIR)):
         p = os.path.join(POLICY_DIR, f)
-        if os.path.isfile(p):
+        if os.path.isfile(p) and f.lower().endswith(".txt"):
             stat = os.stat(p)
             files.append({
                 "name": f,
@@ -62,7 +62,6 @@ _policy_docs = pw.io.fs.read(
     with_metadata=True,
 )
 
-_parser = UnstructuredParser()
 _splitter = TokenCountSplitter(min_tokens=50, max_tokens=300)
 
 _retriever_factory = BruteForceKnnFactory(
@@ -73,7 +72,6 @@ _retriever_factory = BruteForceKnnFactory(
 _doc_store = DocumentStore(
     docs=_policy_docs,
     retriever_factory=_retriever_factory,
-    parser=_parser,
     splitter=_splitter,
 )
 

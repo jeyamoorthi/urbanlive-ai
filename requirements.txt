@@ -5,3 +5,4 @@ codecarbon
 sentence-transformers
 requests
 numpy
+google-generativeai
