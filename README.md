@@ -1,4 +1,4 @@
-# 🏛 AREE v2.2 — Autonomous Regulatory Escalation Engine  
+# 🏛 AREE  — Autonomous Regulatory Escalation Engine  
 ### Real-Time Environmental Governance Infrastructure  
 Pathway Streaming | WAQI Direct | Satellite Verified | Policy Grounded | Deterministic Enforcement  
 
