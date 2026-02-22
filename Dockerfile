@@ -2,7 +2,6 @@ FROM python:3.11-slim
 
 # Install system dependencies required for pdf2image
 RUN apt-get update && apt-get install -y \
-    poppler-utils \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 

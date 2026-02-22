@@ -11,7 +11,6 @@ import pathway as pw
 from pathway.xpacks.llm.document_store import DocumentStore
 from pathway.xpacks.llm.embedders import SentenceTransformerEmbedder
 from pathway.xpacks.llm.splitters import TokenCountSplitter
-from pathway.xpacks.llm.parsers import UnstructuredParser
 from pathway.stdlib.indexing import BruteForceKnnFactory
 from sentence_transformers import SentenceTransformer
 
@@ -57,12 +56,10 @@ _pw_embedder = SentenceTransformerEmbedder(model="all-MiniLM-L6-v2")
 
 _policy_docs = pw.io.fs.read(
     POLICY_DIR,
-    format="binary",
+    format="text",
     mode="streaming",
-    with_metadata=True,
 )
 
-_parser = UnstructuredParser()
 _splitter = TokenCountSplitter(min_tokens=50, max_tokens=300)
 
 _retriever_factory = BruteForceKnnFactory(
@@ -73,7 +70,6 @@ _retriever_factory = BruteForceKnnFactory(
 _doc_store = DocumentStore(
     docs=_policy_docs,
     retriever_factory=_retriever_factory,
-    parser=_parser,
     splitter=_splitter,
 )
 
