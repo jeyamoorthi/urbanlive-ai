@@ -56,7 +56,7 @@ _pw_embedder = SentenceTransformerEmbedder(model="all-MiniLM-L6-v2")
 
 _policy_docs = pw.io.fs.read(
     POLICY_DIR,
-    format="text",
+    format="plaintext",
     mode="streaming",
 )
 
