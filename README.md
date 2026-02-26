@@ -26,8 +26,6 @@ Stateful regulatory escalation infrastructure for environmental governance, buil
 
 AREE processes continuous live air quality monitoring feeds to deterministically output regulatory stage transitions. 
 
-*(Architecture Diagram Placeholder)*
-`[Insert System Architecture Diagram Here]`
 
 **Component Flow:**
 *   **Ingestion Node:** Polls external APIs for continuous station data.
