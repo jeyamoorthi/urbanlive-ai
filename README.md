@@ -1,356 +1,153 @@
-# 🏛 AREE  — Autonomous Regulatory Escalation Engine  
-### Real-Time Environmental Governance Infrastructure  
-Pathway Streaming | WAQI Direct | Satellite Verified | Policy Grounded | Deterministic Enforcement  
+# AREE — Autonomous Regulatory Escalation Engine
+
+Stateful regulatory escalation infrastructure for environmental governance, built on Pathway.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Built with Pathway](https://img.shields.io/badge/Built%20with-Pathway-green)](https://pathway.com/)
+[![Deployed on GCP](https://img.shields.io/badge/Deployed_on-GCP-blue?logo=googlecloud)](https://cloud.google.com/run)
+
+## Table of Contents
+1. [System Architecture](#1-system-architecture)
+2. [Data Pipeline & API Dependencies](#2-data-pipeline--api-dependencies)
+3. [Escalation State Machine](#3-escalation-state-machine)
+4. [Decision Trace Example](#4-decision-trace-example)
+5. [Configuration & Security](#5-configuration--security)
+6. [Deployment Architecture](#6-deployment-architecture)
+7. [Performance & Scalability Considerations](#7-performance--scalability-considerations)
+8. [Failure Modes & Error Handling](#8-failure-modes--error-handling)
+9. [Future Extensibility](#9-future-extensibility)
+10. [Local Development Setup](#10-local-development-setup)
+11. [License](#11-license)
 
 ---
 
-## 🚨 What This Is
+## 1. System Architecture
 
-AREE is a **deterministic, policy-grounded environmental enforcement engine**.
+AREE processes continuous live air quality monitoring feeds to deterministically output regulatory stage transitions. 
 
-It continuously monitors live AQI across India, applies official CPCB/GRAP escalation rules with persistence logic, verifies regional pollution transport using NASA satellite data, and generates municipal-grade escalation reports — in real time.
+*(Architecture Diagram Placeholder)*
+`[Insert System Architecture Diagram Here]`
 
-This is not a visualization dashboard.  
-This is regulatory infrastructure.
+**Component Flow:**
+*   **Ingestion Node:** Polls external APIs for continuous station data.
+*   **Stateful Stream Processor:** Maintains sliding windows using Pathway to smooth transient sensor spikes.
+*   **Rule Evaluator:** Applies static threshold logic (e.g., GRAP constraints) to the smoothed signal.
+*   **Attribution Module:** Correlates local bounds with satellite fire data to establish regional transport metrics.
+*   **Advisory Engine:** Retrieves contextual regulatory guidelines from a vector store based on the active state.
+*   **Artifact Generator:** Renders structured audit logs and PDF reports.
 
----
+## 2. Data Pipeline & API Dependencies
 
-## 🎯 Problem Being Solved
+The system treats external data sources as upstream event emitters and normalizes payloads before processing.
 
-Air quality enforcement systems today are:
+*   **WAQI (World Air Quality Index) API:** Primary telemetry source. Provides real-time AQI and component pollutant metrics at the station level.
+*   **NASA FIRMS (VIIRS NRT) API:** Telemetry source for active fire counts and radiative power, utilized to calculate the regional transport score.
+*   **Google Gemini API:** Utilized strictly for language generation within the advisory context. Does *not* evaluate escalation logic.
 
-- Reactive rather than predictive  
-- City-averaged instead of station-specific  
-- Not traceable to legal thresholds  
-- Not satellite-verified  
-- Not audit-ready  
+## 3. Escalation State Machine
 
-AREE transforms environmental monitoring into:
+Escalation is treated as a deterministic state machine rather than a probabilistic outcome. 
 
-✔ Deterministic escalation logic  
-✔ Legally traceable trigger rules  
-✔ Satellite-attributed causality  
-✔ Predictive early warning  
-✔ Governance-ready reporting  
-✔ National monitoring capability  
+**State Transition Constraints:**
+*   **Persistence Window:** 3-minute tumbling/sliding window with a 1-minute hop interval.
+*   **Hysteresis Guard:** A state transition requires `N` consecutive evaluations above threshold `T` within the window to prevent oscillating enforcement actions.
+*   **Station Isolation:** Logic runs per station bounding box; city-wide averaging is strictly avoided to preserve localized enforcement capability.
 
----
+## 4. Decision Trace Example
 
-## 🧠 Core Innovation
+To ensure auditability, every state transition generates a structured decision trace payload.
 
-AREE combines five layers into one enforcement pipeline:
-
-```
-Live WAQI Feed (Station-Level)
-        ↓
-Sliding Window Persistence Engine
-        ↓
-Predictive Intelligence (Short-Term Forecast)
-        ↓
-Satellite Transport Verification (NASA FIRMS)
-        ↓
-Policy-Grounded Advisory (Pathway RAG)
-        ↓
-Municipal-Ready Escalation Report
-```
-
-All enforcement decisions are deterministic and traceable.
-
----
-
-## ⚖ Deterministic Escalation Logic
-
-Official GRAP trigger implementation:
-
-- AQI ≥ 300 threshold  
-- 3 consecutive sliding windows  
-- 3-min duration, 1-min hop  
-- 2 hysteresis confirmations  
-- Direct WAQI AQI (no recomputation)  
-
-Every decision includes:
-
-- Trigger rule display  
-- Decision trace  
-- Persistence state  
-- Remaining windows  
-- Projected trigger time  
-
-No generative AI influences escalation logic.
-
----
-
-## 🇮🇳 Pan-India Monitoring Mode
-
-AREE operates in two modes:
-
-### 🔹 Single Station Mode
-Full 16-section regulatory dashboard:
-- AQI ingestion
-- Persistence engine
-- Predictive model
-- Satellite attribution
-- ERI scoring
-- Policy grounding
-- Vulnerable population risk
-- PDF export
-
-### 🔹 National Overview Mode
-- Dynamic station loading (WAQI Search API)
-- Up to 30 live Indian stations
-- Real-time India map
-- Top 5 Highest AQI ranking
-- Top 5 Highest ERI ranking
-- Focus station drill-down
-
-This transforms AREE into a **National Environmental Command Console**.
-
----
-
-## 🔮 Predictive Intelligence
-
-Short-term early warning system:
-
-- Linear regression (numpy.polyfit)
-- 5-minute AQI projection
-- 30-minute AQI projection
-- Trend direction detection
-- Escalation ETA
-- Z-score anomaly detection
-
-Fully deterministic.
-No external ML APIs.
-
----
-
-## 🛰 Satellite Transport Verification
-
-Integrated NASA FIRMS (VIIRS_SNPP_NRT):
-
-- Bounding box per station
-- Confidence filtering
-- Wind alignment physics
-- Transport score (0–100)
-- Attribution classification:
-  - regional_transport
-  - possible_transport
-  - local_emission
-
-Pollution source attribution becomes measurable.
-
----
-
-## 📜 Policy Grounding (Pathway Streaming RAG)
-
-- Pathway `DocumentStore` (Live Hybrid Index)
-- Streaming policy re-indexing
-- SentenceTransformer embeddings (384-dim)
-- Similarity score transparency
-- Index metadata display
-- Live policy upload support
-
-Used to ground advisory context.
-
-Enforcement remains deterministic.
-
----
-
-## 📊 Escalation Readiness Index (ERI)
-
-Advisory readiness scoring:
-
-```
-AQI ≥ 200         → +40
-Slope > 0.5       → +20
-Persistence ≥ 1   → +20
-Transport > 50    → +10
-Exposure > 150    → +10
+```json
+{
+  "timestamp": "2024-10-27T14:32:01Z",
+  "station_id": "STN-IN-DL-04",
+  "evaluation_window_minutes": 3,
+  "telemetry": {
+    "aqi_current": 412,
+    "aqi_persistence_flag": true,
+    "trend_slope": 15.4
+  },
+  "attribution": {
+    "nasa_firms_transport_score": 78,
+    "wind_vector_alignment": true
+  },
+  "state_transition": {
+    "previous_state": "GRAP_STAGE_2",
+    "new_state": "GRAP_STAGE_3",
+    "trigger_condition": "AQI > 400 AND persistence_flag == true"
+  },
+  "generated_artifacts": [
+    "escalation_report_STN-IN-DL-04_1703688190.pdf"
+  ]
+}
 ```
 
-ERI does NOT affect GRAP trigger logic.  
-It supports pre-emptive governance planning.
+## 5. Configuration & Security
 
----
+The system is configured via environment variables.
 
-## 👥 Vulnerable Population Protection Engine (VPPE)
+| Variable | Requirement | Description |
+| :--- | :--- | :--- |
+| `WAQI_TOKEN` | Required | API key for World Air Quality Index data ingestion. |
+| `FIRMS_API_KEY` | Required | API key for NASA FIRMS satellite telemetry. |
+| `GEMINI_API_KEY` | Required | API key for advisory generation. |
+| `EVALUATION_WINDOW_MIN` | Optional | Duration of the persistence window. Default: `3`. |
+| `GRAP_THRESHOLDS_JSON` | Optional | Path to local threshold overrides. |
 
-Deterministic multipliers:
+**Security Considerations:**
+*   Secrets must be injected via secure context (e.g., GCP Secret Manager) during deployment.
+*   No keys are logged in output traces.
+*   Advisory generation prompts are strictly scoped to prevent prompt injection from affecting regulatory outputs.
 
-- General ×1.0  
-- Elderly ×1.4  
-- Children ×1.6  
-- Respiratory ×1.8  
+## 6. Deployment Architecture
 
-Risk categories:
+The production target is Google Cloud Run, leveraging a containerized, stateless compute layer wrapping the stateful stream.
 
-- LOW  
-- MODERATE  
-- HIGH  
-- SEVERE  
+*   **Compute:** Google Cloud Run (Containerized Python environment).
+*   **Concurrency:** Handled via Gunicorn/Uvicorn workers depending on the streaming implementation constraints.
+*   **State Management:** Pathway manages in-memory state for active windows. 
+*   **Artifact Storage:** Scalable object storage (e.g., GCS) for generated PDF reports.
 
-Enables public health advisory planning.
+## 7. Performance & Scalability Considerations
 
----
+*   **Memory Footprint:** Pathway state is bounded by the sliding window duration. Stale events are discarded. Memory usage scales linearly with the number of tracked stations `O(S)`.
+*   **Compute Latency:** Evaluation logic is `O(1)` per window hop. Total processing time per tick is bounded by downstream rendering (PDF generation) and external advisory API calls.
+*   **Network Bottlenecks:** NASA FIRMS and WAQI API rate limits dictate the minimum polling frequency. Caching layers are required for redundant geofence queries.
 
-## 📄 Municipal-Ready Governance Report
+## 8. Failure Modes & Error Handling
 
-4-page structured PDF:
+*   **Upstream API Timeout:** If WAQI or FIRMS is unreachable, the station state is marked `STALE`. The window will not forcefully escalate on stale data.
+*   **Missing Telemetry Data:** Handled via forward-filling for `T < 5 minutes`. Exceeding 5 minutes forces a `SENSOR_FAULT` state.
+*   **LLM API Failure (Gemini):** If the advisory generation fails, the system degrades gracefully by outputting the raw static policy text mapped to the current state, ensuring escalation is not blocked.
 
-1. Executive Situation Brief  
-2. Technical Escalation Detail  
-3. Policy Grounding & Legal Basis  
-4. System Transparency & Carbon Accounting  
+## 9. Future Extensibility
 
-Generated via `reportlab.platypus`.
+*   **Alternative Rulesets:** Decoupling GRAP-specific logic to support arbitrary JSON-defined state machines for EU or US EPA AQI frameworks.
+*   **Spatial Interpolation:** Adding inverse distance weighting (IDW) to estimate AQI values between adjacent physical monitoring stations.
+*   **Webhooks:** Outbound webhook support for triggering external SMS gateways or downstream municipal IoT systems based on the decision trace.
 
-No LLM-generated narrative included.
+## 10. Local Development Setup
 
-Audit-ready.
+### System Requirements
+*   Python 3.10+
+*   Virtual Environment (recommended)
 
----
-
-## 🤖 LLM Usage — Controlled & Constrained
-
-Gemini 2.5 Flash Lite used strictly for:
-
-- Structured JSON risk interpretation  
-- No number modification  
-- No policy inference  
-- No enforcement authority  
-- Rate limited + cached  
-
-LLM is explanatory only.
-
-This avoids hallucinated regulatory decisions.
-
----
-
-## 🔍 Transparency & Auditability
-
-Every station shows:
-
-- WAQI Feed ID  
-- API timestamp  
-- Data freshness  
-- Dominant pollutant  
-- Pollutants available count  
-- Escalation rule  
-- Decision trace  
-- RAG metadata  
-- Embedding model  
-- Index sync time  
-- Carbon accounting  
-
-The system is fully inspectable.
-
----
-
-## 🏗 Architecture Overview
-
-```
-app.py                  → Orchestration
-streamlit_app.py        → UI Layer
-aqi_stream.py           → WAQI ingestion
-firms_stream.py         → Satellite polling + transport score
-station_loader.py       → Pan-India dynamic loader
-advisory_engine.py      → Deterministic escalation engine
-llm_engine.py           → Structured Gemini layer
-report_generator.py     → Governance PDF generator
-config.py               → Central configuration
-policies/               → Live-indexed policy documents
-```
-
----
-
-## 🚀 How to Run
-
-### 1️⃣ Install
-
+### Installation
 ```bash
+git clone https://github.com/jeyamoorthi/urbanlive-ai.git
+cd urbanlive-ai
+python -m venv venv
+source venv/bin/activate  # macOS/Linux
+# venv\Scripts\activate   # Windows
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Configure Environment
-
-Create `.env`:
-
-```env
-WAQI_TOKEN=your_token
-FIRMS_API_KEY=your_key
-GEMINI_API_KEY=your_key
-```
-
-### 3️⃣ Start System
-
+### Execution
+Define `.env` securely, then boot the stream:
 ```bash
 streamlit run streamlit_app.py
 ```
 
-Runs at:
-
-```
-http://localhost:8501
-```
-
----
-
-## � Design Principles
-
-1. Determinism over hallucination  
-2. Policy grounding over generic advice  
-3. Transparency over black-box prediction  
-4. National scalability  
-5. Governance-grade outputs  
-
----
-
-## ⚠ Limitations
-
-- Dependent on WAQI station availability  
-- Satellite detection limited by FIRMS resolution  
-- Linear regression (short-term forecast only)  
-- Static population placeholder  
-- GRAP logic Delhi-based (extendable to other state protocols)  
-
----
-
-## 🏆 Positioning
-
-AREE is positioned as:
-
-> A Deterministic Environmental Enforcement Infrastructure  
-> Not a dashboard  
-> Not a chatbot  
-> Not a generative demo  
-
-Designed for:
-
-- Municipal Corporations  
-- State Pollution Control Boards  
-- Environmental Command Centers  
-- Regulatory Agencies  
-
----
-
-## 🌱 Why This Matters
-
-Environmental governance requires:
-
-- Traceability  
-- Threshold discipline  
-- Early warning  
-- Attribution  
-- Legal defensibility  
-
-AREE demonstrates that real-time environmental regulation can be:
-
-- Predictive  
-- Satellite-verified  
-- Policy-grounded  
-- Deterministic  
-- Nationally scalable  
-
----
-
-**AREE v2.2**  
-Pathway × Real-Time Governance × Deterministic Intelligence
+## 11. License
+Distributed under the MIT License. See `LICENSE` for more information.
